@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Pedido</title>
-    <script src="script.js" defer></script>
+    <script src="src/javascript/checkout.js" type="module" defer></script>
 </head>
+
 <body>
     <div id="global">
         <div id="container">
@@ -31,40 +33,47 @@
                 </div>
                 <main>
                     <form action="" autocomplete="new-password" onsubmit="finalizarPedido(event)">
-                        <input type="text" name="nome" id="nome-cliente" placeholder="Nome" autocomplete="new-password" class="primeiros">
-                        <input type="tel" name="telefone" id="fone-cliente" placeholder="Telefone" autocomplete="new-password" maxlength="16" class="primeiros">
-                        <input type="text" name="endereco" id="endereco-cliente" placeholder="Endereço" autocomplete="new-password" class="primeiros">
+                        <input type="text" name="nome" id="nome-cliente" placeholder="Nome" autocomplete="new-password"
+                            class="primeiros">
+                        <input type="tel" name="telefone" id="fone-cliente" placeholder="Telefone"
+                            autocomplete="new-password" maxlength="16" class="primeiros">
+                        <input type="text" name="endereco" id="endereco-cliente" placeholder="Endereço"
+                            autocomplete="new-password" class="primeiros">
                         <textarea name="pedido" id="pedido-cliente" placeholder="Pedido"></textarea>
                         <div id="valores">
-                            <input type="number" name="valor" id="valor-pedido" placeholder="Valor" autocomplete="new-password">
+                            <input type="text" name="valor" id="valor-pedido" placeholder="Valor"
+                                autocomplete="new-password">
                             <select name="pagamento" id="pagamento">
                                 <option value="cartao">Cartão</option>
                                 <option value="pix">Pix</option>
                                 <option value="din">Dinheiro</option>
                                 <option value="troco">Troco</option>
                             </select>
-                            <input type="number" name="troco" id="troco" placeholder="Troco">
+                            <input type="text" name="troco" id="troco" placeholder="Troco">
                         </div>
                         <input type="submit" value="Finalizar" id="botao">
                     </form>
                 </main>
             </div>
         </div>
-    <div class="modalDeConfirmacaoDePedido" id="modalDeConfirmacaoDePedido">
-        <div class="modalDeConfirmacaoDePedido-conteudo">
-            <button class="modalDeConfirmacaoDePedido-fechar" onclick="fecharModalDeConfirmacaoDePedido()">X</button>
-            <h2>Confirme o pedido</h2>
-            <p>Número do pedido: <span id="numero-do-pedido-modal"></span></p></p>
-            <p>Nome: <span id="nome-cliente-modal"></span></p>
-            <p>Telefone: <span id="fone-cliente-modal"></span></p>
-            <p>Endereço: <span id="endereco-cliente-modal"></span></p>
-            <p>Pedido: <span id="pedido-cliente-modal"></span></p>
-            <p>Valor: <span id="valor-pedido-modal"></span></p>
-            <p>Forma de pagamento: <span id="pagamento-modal"></span></p>
-            <p>Valor do troco: <span id="troco-modal"></span></p>
-            <input type="submit" value="Confirmar" onclick="confirmarPedido()">
+        <div class="modalDeConfirmacaoDePedido" id="modalDeConfirmacaoDePedido">
+            <div class="modalDeConfirmacaoDePedido-conteudo">
+                <button class="modalDeConfirmacaoDePedido-fechar"
+                    onclick="fecharModalDeConfirmacaoDePedido()">X</button>
+                <h2>Confirme o pedido</h2>
+                <p>Número do pedido: <span id="numero-do-pedido-modal"></span></p>
+                </p>
+                <p>Nome: <span id="nome-cliente-modal"></span></p>
+                <p>Telefone: <span id="fone-cliente-modal"></span></p>
+                <p>Endereço: <span id="endereco-cliente-modal"></span></p>
+                <p>Pedido: <span id="pedido-cliente-modal"></span></p>
+                <p>Valor: <span id="valor-pedido-modal"></span></p>
+                <p>Forma de pagamento: <span id="pagamento-modal"></span></p>
+                <p>Valor do troco: <span id="troco-modal"></span></p>
+                <input type="submit" value="Confirmar" onclick="confirmarPedido()">
+            </div>
         </div>
-    </div>
-    
+
 </body>
+
 </html>
